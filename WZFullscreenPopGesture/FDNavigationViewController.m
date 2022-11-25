@@ -19,19 +19,18 @@
     // Do any additional setup after loading the view.
     self.fd_backItem = [UIImage imageNamed:@"navBack"];
     self.fd_open = YES;
+    
+//    /// 解决ios13 后导航栏透明
+//    if(@available(iOS 13.0, *)) {
+//        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+//        [appearance configureWithTransparentBackground];
+//        appearance.backgroundColor= UIColor.whiteColor;
+//        appearance.shadowImage = [UIImage new];
+//        appearance.shadowColor = UIColor.clearColor;
+//        self.navigationBar.standardAppearance = appearance;
+//        self.navigationBar.scrollEdgeAppearance = appearance;
+//     }
 }
 
-
-- (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
-{
-    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
 
 @end

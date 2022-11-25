@@ -20,11 +20,15 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.orangeColor;
+
+    UIView *xxxx = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    xxxx.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:xxxx];
+//    self.fd_prefersNavigationBarHidden = true;
     [self addUITapGestureRecognizer];
-    UINavigationBar *baaa = self.navigationController.navigationBar;
-    BOOL  xxxx = self.navigationController.fd_open;
-    NSLog(@"%f",baaa.frame.size.height);
 }
+
+
  
 - (void)addUITapGestureRecognizer{
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)]];
@@ -32,7 +36,7 @@
 
 - (void)tapAction{
     Demo1ViewController *vc = [Demo1ViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 /*

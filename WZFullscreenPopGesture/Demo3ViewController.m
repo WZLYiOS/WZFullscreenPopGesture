@@ -9,6 +9,7 @@
 #import "Demo3ViewController.h"
 #import "Demo0ViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import "Demo1ViewController.h"
 @interface Demo3ViewController ()
 
 @end
@@ -17,7 +18,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
 }
 
 - (void)viewDidLoad {
@@ -25,27 +25,40 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.whiteColor;
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"帮助" style:0 target:self action:@selector(xxxxxAction)];
-    
-    self.fd_showCustomNavigationBar = YES;
-    [self.fd_customNavigationBar setBackgroundImage:[self imageWithColor:[UIColor blackColor] andSize:CGSizeMake(1, 1)] forBarPosition:0 barMetrics:0];
+
+    self.fd_customNavigationBar.fd_titleColor = UIColor.blackColor;
+    [self.fd_customNavigationBar setHidden:false];
+    self.fd_customNavigationBar.fd_titleFont = [UIFont boldSystemFontOfSize:20];
+    self.fd_customNavigationBar.barTintColor = UIColor.blueColor;
+
+
     [self addUITapGestureRecognizer];
-    
     UIView *xxxx = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
-    xxxx.backgroundColor = [UIColor orangeColor];
+    xxxx.backgroundColor = [UIColor redColor];
     [self.view addSubview:xxxx];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
 }
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+}
+
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return [self.fd_customNavigationBar getStatusBarStyle];
+//}
 
 - (void)addUITapGestureRecognizer{
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)]];
 }
 
 - (void)tapAction{
+//    self.fd_customNavigationBar.barTintColor = UIColor.redColor;
+//    self.fd_customNavigationBar.barStyle = UIBarStyleDefault;
     Demo0ViewController *vc = [Demo0ViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+- (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
 @end
 

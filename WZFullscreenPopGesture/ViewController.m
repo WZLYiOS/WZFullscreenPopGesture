@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Demo0ViewController.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-
+#import "Demo3ViewController.h"
 @interface ViewController ()
 
 @end
@@ -22,6 +22,12 @@
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.orangeColor;
     [self addUITapGestureRecognizer];
+    
+    UIButton *bbbb = [[UIButton alloc] init];
+    bbbb.frame = CGRectMake(0, 0, 100, 30);
+    bbbb.backgroundColor = UIColor.blackColor;
+    [bbbb addTarget:self action:@selector(bbbbtapAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:bbbb];
 }
 
 - (void)addUITapGestureRecognizer{
@@ -29,10 +35,16 @@
 }
 
 - (void)tapAction{
-    Demo0ViewController *vc = [Demo0ViewController new];
+//    Demo0ViewController *vc = [Demo0ViewController new];
+//    [self.navigationController pushViewController:vc animated:YES];
+    Demo3ViewController *vc = [Demo3ViewController new];
     [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController setViewControllers:@[vc] animated:true];
 }
 
+- (void)bbbbtapAction{
+    
+}
 
 
 @end

@@ -20,8 +20,12 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.whiteColor;
-    self.fd_showCustomNavigationBar = YES;
+    
     [self addUITapGestureRecognizer];
+    
+    NSInteger count = self.navigationController.viewControllers.count;
+    NSLog(@"aaaaaaaa");
+    
 }
 
 - (void)addUITapGestureRecognizer{
@@ -31,6 +35,7 @@
 - (void)tapAction{
     Demo2ViewController *vc = [Demo2ViewController new];
     [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController setViewControllers:@[vc] animated:true];
 }
 /*
 #pragma mark - Navigation

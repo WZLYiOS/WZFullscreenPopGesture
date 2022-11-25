@@ -45,7 +45,7 @@
 @property (nonatomic, assign) BOOL fd_open;
 
 // 默认返回按钮: image/UIView
-@property (strong,nonatomic) id fd_backItem;
+@property (strong,nonatomic) UIImage *fd_backItem;
 
 @end
 
@@ -67,19 +67,36 @@
 /// gesture. 0 by default, which means it will ignore this limit.
 @property (nonatomic, assign) CGFloat fd_interactivePopMaxAllowedInitialDistanceToLeftEdge;
 
-/// 是否显示自定义导航栏
-@property (nonatomic, assign) BOOL fd_showCustomNavigationBar;
-
 /// 自定义NavigationBar
-@property (strong,nonatomic,readonly) UINavigationBar *fd_customNavigationBar;
+@property (strong,nonatomic,readonly) FDNavigationBar *fd_customNavigationBar;
+
+/// 是否显示返回按钮
+@property (nonatomic, assign) BOOL fd_HiddenBackNavigationBarItem;
 
 @end
 
-
-/// 一定要重写bgroundView的frame
+// MARK - 自定义导航栏
 @interface FDNavigationBar : UINavigationBar
 
+@property (strong, nonatomic) UINavigationItem *navigationItem;
+
+- (instancetype)initWithController: (UIViewController*)contoller;
+
 
 @end
 
+/// MARK - 颜色装换图片
+@interface UIImage (FDFullscreenPopGesture)
 
++ (UIImage *)fd_imageWithColor:(UIColor *)color andSize:(CGSize)size;
+
+@end
+
+/// MARK - 扩展字体
+@interface UINavigationBar (FDFullscreenPopGesture)
+
+@property (strong,nonatomic) UIColor *fd_titleColor;
+@property (strong,nonatomic) UIFont *fd_titleFont;
+@property (assign, nonatomic) CGFloat fd_backGroundViewAlpha;
+
+@end

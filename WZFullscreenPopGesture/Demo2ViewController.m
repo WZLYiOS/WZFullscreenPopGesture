@@ -21,6 +21,10 @@
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.blueColor;
     [self addUITapGestureRecognizer];
+    
+    UIView *xxxx = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    xxxx.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:xxxx];
 }
 
 - (void)addUITapGestureRecognizer{
@@ -29,7 +33,8 @@
 
 - (void)tapAction{
     Demo3ViewController *vc = [Demo3ViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController setViewControllers:@[vc] animated:true];
 }
 
 /*

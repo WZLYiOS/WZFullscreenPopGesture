@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28484D22271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 28484D21271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.m */; };
 		80033D9822C0682800C719E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80033D9722C0682800C719E9 /* AppDelegate.m */; };
 		80033D9B22C0682800C719E9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80033D9A22C0682800C719E9 /* ViewController.m */; };
 		80033D9E22C0682800C719E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80033D9C22C0682800C719E9 /* Main.storyboard */; };
 		80033DA022C0682900C719E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80033D9F22C0682900C719E9 /* Assets.xcassets */; };
 		80033DA322C0682900C719E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80033DA122C0682900C719E9 /* LaunchScreen.storyboard */; };
 		80033DA622C0682900C719E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80033DA522C0682900C719E9 /* main.m */; };
-		80033DAF22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 80033DAD22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		D02AC1D82397620F00527A6D /* Demo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02AC1D72397620F00527A6D /* Demo1ViewController.m */; };
 		D02AC1DB2397621900527A6D /* Demo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02AC1DA2397621900527A6D /* Demo2ViewController.m */; };
 		D02AC1DE2397622300527A6D /* Demo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02AC1DD2397622300527A6D /* Demo3ViewController.m */; };
@@ -22,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28484D20271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		28484D21271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		80033D9322C0682800C719E9 /* WZFullscreenPopGesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZFullscreenPopGesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80033D9622C0682800C719E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80033D9722C0682800C719E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,8 +34,6 @@
 		80033DA222C0682900C719E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80033DA422C0682900C719E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80033DA522C0682900C719E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		80033DAD22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		80033DAE22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		D02AC1D62397620F00527A6D /* Demo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo1ViewController.h; sourceTree = "<group>"; };
 		D02AC1D72397620F00527A6D /* Demo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo1ViewController.m; sourceTree = "<group>"; };
 		D02AC1D92397621900527A6D /* Demo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demo2ViewController.h; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		80033DAC22C0698400C719E9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				80033DAE22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.h */,
-				80033DAD22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.m */,
+				28484D20271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.h */,
+				28484D21271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 				80033D9B22C0682800C719E9 /* ViewController.m in Sources */,
 				D02AC1D82397620F00527A6D /* Demo1ViewController.m in Sources */,
 				80033DA622C0682900C719E9 /* main.m in Sources */,
-				80033DAF22C069CB00C719E9 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				28484D22271815DB0091468E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				D02AC1DB2397621900527A6D /* Demo2ViewController.m in Sources */,
 				80033D9822C0682800C719E9 /* AppDelegate.m in Sources */,
 				D02AC1DE2397622300527A6D /* Demo3ViewController.m in Sources */,
@@ -330,14 +330,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TA399PG2C9;
+				DEVELOPMENT_TEAM = 74MC74A426;
 				INFOPLIST_FILE = WZFullscreenPopGesture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wzly.new;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wzly.ne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,14 +348,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TA399PG2C9;
+				DEVELOPMENT_TEAM = 74MC74A426;
 				INFOPLIST_FILE = WZFullscreenPopGesture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wzly.new;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wzly.ne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
