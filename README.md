@@ -1,26 +1,29 @@
-## Requirements:
-- **iOS** 8.0+
-- Xcode 10.0+
-- Swift 5.0+
+# WZFullscreenPopGesture
 
-## Installation Cocoapods
-<pre><code class="ruby language-ruby">pod 'WZFullscreenPopGesture', '~> 1.1.0'</code></pre>
+[![CI Status](https://img.shields.io/travis/qiuqixiang/WZFullscreenPopGesture.svg?style=flat)](https://travis-ci.org/qiuqixiang/WZFullscreenPopGesture)
+[![Version](https://img.shields.io/cocoapods/v/WZFullscreenPopGesture.svg?style=flat)](https://cocoapods.org/pods/WZFullscreenPopGesture)
+[![License](https://img.shields.io/cocoapods/l/WZFullscreenPopGesture.svg?style=flat)](https://cocoapods.org/pods/WZFullscreenPopGesture)
+[![Platform](https://img.shields.io/cocoapods/p/WZFullscreenPopGesture.svg?style=flat)](https://cocoapods.org/pods/WZFullscreenPopGesture)
 
-## 说明
+## Example
 
-fixed：修改了setViewControllers:animated不行的问题
-参考 [FDFullscreenPopGesture](https://github.com/forkingdog/FDFullscreenPopGesture.git)
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Requirements
+
+## Installation
+
+WZFullscreenPopGesture is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'WZFullscreenPopGesture'
+```
+
+## Author
+
+qiuqixiang, 739140860@qq.com
 
 ## License
 
-WZFullscreenPopGesture is released under an MIT license. See [LICENSE](LICENSE) for more information.
-
-## 具体用法
-
-使用自定义NavigationBar：self.fd_showCustomNavigationBar = true
-修改自定义NavigationBar：self.fd_customNavigationBar.setBackgroundImage(UIImage(), for: .default)
-
-## 自定义UINavigationController 实现以下
-开启和关闭fd(解决跟其他自定义隐藏NavigationBar冲突)： self.fd_open = YES;
-设置默认返回按钮：self.fd_backItem = [UIImage imageNamed:@"navBack"];
+WZFullscreenPopGesture is available under the MIT license. See the LICENSE file for more info.

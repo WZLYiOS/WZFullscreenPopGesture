@@ -1,0 +1,6 @@
+framework module Pods_WZFullscreenPopGesture_Tests {
+  umbrella header "Pods-WZFullscreenPopGesture_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

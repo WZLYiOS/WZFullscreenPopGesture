@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'WZFullscreenPopGesture_Example' do
+  pod 'WZFullscreenPopGesture', :path => '../'
+
+  target 'WZFullscreenPopGesture_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
