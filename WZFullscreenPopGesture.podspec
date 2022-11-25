@@ -34,6 +34,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WZFullscreenPopGesture/Classes/**/*'
   
+  s.user_target_xcconfig = {
+    'GENERATE_INFOPLIST_FILE' => 'YES'
+  }
+  s.pod_target_xcconfig = {
+    'GENERATE_INFOPLIST_FILE' => 'YES'
+  }
+  
   # s.resource_bundles = {
   #   'WZFullscreenPopGesture' => ['WZFullscreenPopGesture/Assets/*.png']
   # }
@@ -41,4 +48,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
 end
