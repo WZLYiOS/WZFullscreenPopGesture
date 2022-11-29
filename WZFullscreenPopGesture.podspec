@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WZFullscreenPopGesture'
-  s.version          = '6.0.0'
+  s.version          = '6.0.1'
   s.summary          = 'A short description of WZFullscreenPopGesture.'
 
 # This description is used to generate tags and improve search results.
@@ -37,9 +37,9 @@ TODO: Add long description of the pod here.
   s.user_target_xcconfig = {
     'GENERATE_INFOPLIST_FILE' => 'YES'
   }
-  s.pod_target_xcconfig = {
-    'GENERATE_INFOPLIST_FILE' => 'YES'
-  }
+   # s.pod_target_xcconfig = {
+   #   'GENERATE_INFOPLIST_FILE' => 'YES'
+   #  }
   
   # s.resource_bundles = {
   #   'WZFullscreenPopGesture' => ['WZFullscreenPopGesture/Assets/*.png']
