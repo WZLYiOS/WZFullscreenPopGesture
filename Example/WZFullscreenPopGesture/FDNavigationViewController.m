@@ -17,8 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.fd_backItem = [UIImage imageNamed:@"navBack"];
-    self.fd_open = YES;
     
 //    /// 解决ios13 后导航栏透明
 //    if(@available(iOS 13.0, *)) {

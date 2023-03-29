@@ -103,9 +103,9 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillAppear:), self, @selector(fd_viewWillAppear:));
-        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillDisappear:), self, @selector(fd_viewWillDisappear:));
-        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewDidLoad), self, @selector(fd_viewDidLoad));
+//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillAppear:), self, @selector(fd_viewWillAppear:));
+//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillDisappear:), self, @selector(fd_viewWillDisappear:));
+//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewDidLoad), self, @selector(fd_viewDidLoad));
 //        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillLayoutSubviews), self, @selector(fd_viewDidLayoutSubviews));
     });
 }
@@ -124,25 +124,20 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 {
     // Forward to primary implementation.
     [self fd_viewWillDisappear:animated];
-    if (self.navigationController.fd_open == false) { return; }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        UIViewController *viewController = self.navigationController.viewControllers.lastObject;
-        if (viewController && !viewController.fd_prefersNavigationBarHidden && viewController.navigationController.fd_open) {
-            [self.navigationController setNavigationBarHidden:NO animated:NO];
-        }
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        UIViewController *viewController = self.navigationController.viewControllers.lastObject;
+//        if (viewController && !viewController.fd_prefersNavigationBarHidden) {
+//            [self.navigationController setNavigationBarHidden:NO animated:NO];
+//        }
+//    });
 }
 
 - (void)fd_viewDidLoad{
     [self fd_viewDidLoad];
-    if (self.navigationController.fd_open == false) { return; }
-    [self setBackNavigationItem];
 }
 
 - (void)fd_viewDidLayoutSubviews {
     [self fd_viewDidLayoutSubviews];
-    /// 更新背景图片
-    if (self.navigationController.fd_open == false) { return; }
 }
 
 - (_FDViewControllerWillAppearInjectBlock)fd_willAppearInjectBlock
@@ -153,25 +148,6 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 - (void)setFd_willAppearInjectBlock:(_FDViewControllerWillAppearInjectBlock)block
 {
     objc_setAssociatedObject(self, @selector(fd_willAppearInjectBlock), block, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-
-/// 设置导航栏默认返回样式
-- (void)setBackNavigationItem{
-    
-    /// 设置导航栏默认返回样式
-    if (self.navigationController.viewControllers.count>1 && !self.fd_HiddenBackNavigationBarItem && self.navigationController.fd_backItem) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[self.navigationController.fd_backItem imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnAction)];
-    }else{
-        if (self.fd_HiddenBackNavigationBarItem) {
-            self.navigationItem.leftBarButtonItem = [UIBarButtonItem new];
-        }
-    }
-}
-
-#pragma mark - 返回
-- (void)leftBtnAction {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -224,9 +200,6 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     for (UIViewController *viewController in viewControllers) {
         [self fd_setupViewControllerBasedNavigationBarAppearanceIfNeeded:viewController];
     }
-    if (viewControllers.count <= 1) {
-        viewControllers.lastObject.fd_HiddenBackNavigationBarItem = true;
-    }
     [self fd_setViewControllers:viewControllers animated:animated];
 }
 
@@ -256,22 +229,22 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
         return;
     }
     
-    __weak typeof(self) weakSelf = self;
-    _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (strongSelf && viewController.navigationController.fd_open) {
-            [strongSelf setNavigationBarHidden:viewController.fd_prefersNavigationBarHidden animated:animated];
-        }
-    };
+//    __weak typeof(self) weakSelf = self;
+//    _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
+//        __strong typeof(weakSelf) strongSelf = weakSelf;
+//        if (strongSelf && viewController.navigationController.fd_open) {
+//            [strongSelf setNavigationBarHidden:viewController.fd_prefersNavigationBarHidden animated:animated];
+//        }
+//    };
     
     // Setup will appear inject block to appearing view controller.
     // Setup disappearing view controller as well, because not every view controller is added into
     // stack by pushing, maybe by "-setViewControllers:".
-    appearingViewController.fd_willAppearInjectBlock = block;
-    UIViewController *disappearingViewController = self.viewControllers.lastObject;
-    if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
-        disappearingViewController.fd_willAppearInjectBlock = block;
-    }
+//    appearingViewController.fd_willAppearInjectBlock = block;
+//    UIViewController *disappearingViewController = self.viewControllers.lastObject;
+//    if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
+//        disappearingViewController.fd_willAppearInjectBlock = block;
+//    }
 }
 
 - (_FDFullscreenPopGestureRecognizerDelegate *)fd_popGestureRecognizerDelegate
@@ -348,15 +321,15 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)fd_prefersNavigationBarHidden
-{
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setFd_prefersNavigationBarHidden:(BOOL)hidden
-{
-    objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
+//- (BOOL)fd_prefersNavigationBarHidden
+//{
+//    return [objc_getAssociatedObject(self, _cmd) boolValue];
+//}
+//
+//- (void)setFd_prefersNavigationBarHidden:(BOOL)hidden
+//{
+//    objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
 
 
 - (CGFloat)fd_interactivePopMaxAllowedInitialDistanceToLeftEdge
@@ -374,216 +347,6 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, key, @(MAX(0, distance)), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (FDNavigationBar *)fd_customNavigationBar {
-    FDNavigationBar *bar = objc_getAssociatedObject(self, _cmd);
-    if (bar == nil) {
-        /// NavigationBar
-        bar = [[FDNavigationBar alloc] initWithController: self];
-        if (self.navigationController.viewControllers.count>1 && !self.fd_HiddenBackNavigationBarItem && self.navigationController.fd_backItem) {
-            bar.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[self.navigationController.fd_backItem imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnAction)];
-        }
-        [bar setHidden:true];
-        objc_setAssociatedObject(self, _cmd, bar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }return bar;
-}
-
-- (BOOL)fd_HiddenBackNavigationBarItem {
-    return [objc_getAssociatedObject(self, _cmd) boolValue];
-}
-
-- (void)setFd_HiddenBackNavigationBarItem:(BOOL)hidden {
-    objc_setAssociatedObject(self, @selector(fd_HiddenBackNavigationBarItem), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-
-/// MARK - 重写控制器方法，电池条颜色自定义 注意：不建议这么写
-//- (UIStatusBarStyle)preferredStatusBarStyle {
-//
-//    if (self.navigationController.fd_open && self.fd_prefersNavigationBarHidden) {
-//        return [self.fd_customNavigationBar getStatusBarStyle];
-//    }
-//    return [UIApplication sharedApplication].statusBarStyle;
-//}
 
 @end
 
-
-/// MARK - 自定义导航栏
-@interface FDNavigationBar()
-
-/// 控制器
-@property (strong, nonatomic) UIViewController *controller;
-
-@end
-
-@implementation FDNavigationBar
-
-- (instancetype)initWithController:(UIViewController*)contoller {
-    self = [super init];
-    if (self) {
-        self.controller = contoller;
-        self.frame = CGRectMake(0, UIApplication.sharedApplication.statusBarFrame.size.height, contoller.navigationController.navigationBar.frame.size.width, contoller.navigationController.navigationBar.frame.size.height);
-        [self.controller.view addSubview: self];
-        self.fd_backGroundViewAlpha = 1;
-        self.navigationItem = [[UINavigationItem alloc] init];
-        self.navigationItem.title = contoller.navigationItem.title;
-        self.navigationItem.prompt = contoller.navigationItem.prompt;
-        self.navigationItem.titleView = contoller.navigationItem.titleView;
-        [self setItems:@[self.navigationItem]];
-
-        [self setBackgroundImage:[contoller.navigationController.navigationBar backgroundImageForBarMetrics:0] forBarMetrics:UIBarMetricsDefault];
-        [self setShadowImage:contoller.navigationController.navigationBar.shadowImage];
-        [self setTitleTextAttributes:contoller.navigationController.navigationBar.titleTextAttributes];
-        [self setBarStyle:contoller.navigationController.navigationBar.barStyle];
-        self.tintColor = contoller.navigationController.navigationBar.tintColor;
-        self.barTintColor = contoller.navigationController.navigationBar.barTintColor;
-        [self setTranslucent: true];
-    }
-    return self;
-}
-
-- (void)setHidden:(BOOL)hidden {
-    [super setHidden:hidden];
-    if (!hidden) {
-        self.controller.fd_prefersNavigationBarHidden = true;
-    }
-}
-
--(void)layoutSubviews{
-    [super layoutSubviews];
-    [self.controller.view bringSubviewToFront: self];
-    
-    UIView *bgView = [self backGroundView];
-    bgView.alpha = self.fd_backGroundViewAlpha;
-    CGRect frame = bgView.frame;
-    if (frame.size.height == self.frame.size.height) {
-        frame.size.height = UIApplication.sharedApplication.statusBarFrame.size.height+self.frame.size.height;
-        frame.origin.y = -UIApplication.sharedApplication.statusBarFrame.size.height;
-        bgView.frame = frame;
-    }
-}
-
-- (void)setBackgroundColor:(UIColor *)backgroundColor {
-    [super setBackgroundColor: backgroundColor];
-    [self setupAppearance];
-}
-
-/// 颜色视图
-- (UIView*)backGroundView {
-    
-    UIView *view = self.subviews.firstObject;
-    for (UIView *obj in self.subviews) {
-        if ([obj isKindOfClass:NSClassFromString(@"_UIBarBackground")]||[obj isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
-            view = obj;
-        }
-    }
-    return view;
-}
-
-- (void)setBarTintColor:(UIColor *)barTintColor {
-    [super setBarTintColor:barTintColor];
-    
-    if ([self backgroundImageForBarMetrics: UIBarMetricsDefault] != nil) {
-        [self setBackgroundImage: [UIImage fd_imageWithColor: barTintColor andSize: CGSizeMake(self.frame.size.width, self.frame.size.height)] forBarMetrics:UIBarMetricsDefault];
-    }
-    self.backgroundColor = barTintColor;
-    if(@available(iOS 13.0, *)) {
-        self.backgroundColor = barTintColor;
-    }
-}
-
-- (void)setShadowImage:(UIImage *)shadowImage {
-    [super setShadowImage:shadowImage];
-    [self setupAppearance];
-}
-
-- (void)setTitleTextAttributes:(NSDictionary<NSAttributedStringKey,id> *)titleTextAttributes {
-    [super setTitleTextAttributes: titleTextAttributes];
-    [self setupAppearance];
-}
-
-/// 更新导航栏配置
-- (void)setupAppearance {
-    if(@available(iOS 13.0, *)) {
-        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-        [appearance configureWithOpaqueBackground];
-        appearance.backgroundColor = self.backgroundColor;
-        appearance.shadowImage = self.shadowImage;
-        appearance.shadowColor = nil;
-        appearance.titleTextAttributes = self.titleTextAttributes;
-        self.standardAppearance = appearance;
-        self.scrollEdgeAppearance = appearance;
-    }
-}
-
-@end
-
-///  颜色装换图片
-@implementation UIImage (FDFullscreenPopGesture)
-
-+ (UIImage *)fd_imageWithColor:(UIColor *)color andSize:(CGSize)size {
-    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
-@end
-
-/// MARK : 导航栏控制器
-@implementation UINavigationBar (FDFullscreenPopGesture)
-
-
-- (UIColor *)fd_titleColor {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (UIFont *)fd_titleFont {
-    return objc_getAssociatedObject(self, _cmd);
-}
-
-- (void)setFd_titleColor:(UIColor *)fd_titleColor {
-    SEL key = @selector(fd_titleColor);
-    objc_setAssociatedObject(self, key, fd_titleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self uploadTitleTextAttributes];
-}
-
-- (void)setFd_titleFont:(UIFont *)fd_titleFont {
-    SEL key = @selector(fd_titleFont);
-    objc_setAssociatedObject(self, key, fd_titleFont, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self uploadTitleTextAttributes];
-}
-
-- (CGFloat)fd_backGroundViewAlpha {
-    return [objc_getAssociatedObject(self, _cmd) floatValue];
-}
-
-- (void)setFd_backGroundViewAlpha:(CGFloat)fd_backGroundViewAlpha {
-    SEL key = @selector(fd_backGroundViewAlpha);
-    objc_setAssociatedObject(self, key, @(fd_backGroundViewAlpha), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self uploadTitleTextAttributes];
-    if (self.subviews.firstObject != nil) {
-        self.subviews.firstObject.alpha = fd_backGroundViewAlpha;
-    }
-}
-
-/// 更新文字标题
-- (void)uploadTitleTextAttributes{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:self.titleTextAttributes];
-    if (self.fd_titleColor && self.fd_backGroundViewAlpha > 0) {
-        [dic setValue:self.fd_titleColor forKey:NSForegroundColorAttributeName];
-    }else if (self.fd_backGroundViewAlpha == 0) {
-        [dic setValue:UIColor.clearColor forKey:NSForegroundColorAttributeName];
-    }
-    if (self.fd_titleFont) {
-        [dic setValue:self.fd_titleFont forKey:NSFontAttributeName];
-    }
-    [self setTitleTextAttributes:dic];
-}
-
-
-@end

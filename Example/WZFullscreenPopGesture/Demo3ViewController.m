@@ -26,12 +26,6 @@
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.whiteColor;
 
-    self.fd_customNavigationBar.fd_titleColor = UIColor.blackColor;
-    [self.fd_customNavigationBar setHidden:false];
-    self.fd_customNavigationBar.fd_titleFont = [UIFont boldSystemFontOfSize:20];
-    self.fd_customNavigationBar.barTintColor = UIColor.blueColor;
-
-
     [self addUITapGestureRecognizer];
     UIView *xxxx = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     xxxx.backgroundColor = [UIColor redColor];
