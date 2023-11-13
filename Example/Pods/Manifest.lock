@@ -1,5 +1,5 @@
 PODS:
-  - WZFullscreenPopGesture (0.1.0)
+  - WZFullscreenPopGesture (6.0.3)
 
 DEPENDENCIES:
   - WZFullscreenPopGesture (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WZFullscreenPopGesture: d1fd0962b02ee4284fda9150c1b6d95f38c75d98
+  WZFullscreenPopGesture: a590197a7c4ea7c1d2c9aae0e2df52462687c132
 
-PODFILE CHECKSUM: aca645699ac774530ee7effe6c2085e695660ce5
+PODFILE CHECKSUM: 897e3744dd725d510492821e619f5c3bef882c6d
 
 COCOAPODS: 1.11.3

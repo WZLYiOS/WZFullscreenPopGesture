@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "FDNavigationBar.h"
+#import "FDNavigationConfiguration.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 
 FOUNDATION_EXPORT double WZFullscreenPopGestureVersionNumber;

@@ -20,12 +20,24 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.whiteColor;
-    
+    self.fd_prefersNavigationBarHidden = 2;
+    [self.fd_customBar setBackgroundImage: [self imageWithColor:UIColor.yellowColor andSize:CGSizeMake(1, 1)] forBarMetrics:0];
     [self addUITapGestureRecognizer];
     
-    NSInteger count = self.navigationController.viewControllers.count;
     NSLog(@"aaaaaaaa");
     
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 - (void)addUITapGestureRecognizer{

@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0441555B23AA35261D0C4FAF1D5E47C0 /* WZFullscreenPopGesture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCE052E9AF49F2E617C816D63BA70329 /* WZFullscreenPopGesture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F2EC4DC5417832340B7078E38277063 /* FDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7406A0396147D09FF33F5139F0E8140F /* FDNavigationBar.m */; };
 		1EC024B0F8675A71904BC626FB091B06 /* Pods-WZFullscreenPopGesture_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE8097BC8DC229BA6CBDE8B1F479E7E /* Pods-WZFullscreenPopGesture_Tests-dummy.m */; };
-		2667293DC87C11F451F76B4E286BC285 /* WZFullscreenPopGesture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64511E7389CA0CCFD69CFE1BF4747EBF /* WZFullscreenPopGesture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		296AA2E581A2D279A24F2CFFEA897FDE /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 90399B43F5E2EDABD87DA84775589282 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		32CC64CF1DD757622F7C0F5FE0180FC1 /* WZFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF58ABE855E8DDAE432EB1FC7150361 /* WZFullscreenPopGesture-dummy.m */; };
+		4EB3890520E7C18114CE7FAC41F7D42C /* WZFullscreenPopGesture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD489F9BAEE40CA82CDCFAD238E82AA3 /* WZFullscreenPopGesture-dummy.m */; };
 		573316AFE8F61F8D6CE5394BD78C7D79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		941A45556779CC1095A8901C321C406C /* Pods-WZFullscreenPopGesture_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EA81D28EC5B25B5489E250F2276C0E /* Pods-WZFullscreenPopGesture_Example-dummy.m */; };
 		A82932A2BB08B319504395DC6B041F59 /* Pods-WZFullscreenPopGesture_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BE85F1CCAB00DED57DC181ED813F8F9 /* Pods-WZFullscreenPopGesture_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB3A877C942FEFA7207ADD48F4595600 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = D7E71F848E83A2E2FE7C378A92014345 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC8235C5C828E969219CA770C610CBEA /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 411380D09924DD45F0E70FD54484D4F0 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		E91C913F3FE8C7285021475D4092DAF1 /* UINavigationController+FDFullscreenPopGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = C4B37EBF7025B9836FE6ED4AC0B7EA90 /* UINavigationController+FDFullscreenPopGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDA23A3C019671497AF9974DB9659435 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EE150C250FA81E175BFADC3358A967EE /* Pods-WZFullscreenPopGesture_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC9E9FCEB2642D5D0CD0934AA1D8E1E /* Pods-WZFullscreenPopGesture_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFEDD6CD8ADC198B9B908C593E3B90B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F1C2D5873858CBA1AF52177E568188F3 /* FDNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = BD25009C7C4D17A8B13D0B86AE8A706A /* FDNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8BB2873F438F4F93BD50EBC0871B80E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3D651D5C9C8029E246C619E93BF4EC3F /* PBXContainerItemProxy */ = {
+		9F92846CD724EC8AEF539A8B94667E0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EBFC4DC6959B8135F8FA2D0773023169;
 			remoteInfo = WZFullscreenPopGesture;
 		};
-		938C1DFB7E2284FE0B985AB2AD4DF68C /* PBXContainerItemProxy */ = {
+		DE844B6F3378C8B69A0870DD0C5791F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -38,56 +40,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00C69D89C65509B985D878AB95DEC97D /* WZFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WZFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
 		08012DA39DF23D075BB1762A02FD213F /* Pods-WZFullscreenPopGesture_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WZFullscreenPopGesture_Example-frameworks.sh"; sourceTree = "<group>"; };
-		0A0FB6FA42602EC1C1EE5FA30ADF81E5 /* WZFullscreenPopGesture.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WZFullscreenPopGesture.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		12A7F21E0C1765AD2F5031575E44FAFE /* WZFullscreenPopGesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WZFullscreenPopGesture.release.xcconfig; sourceTree = "<group>"; };
-		1380BA82E5F3A590744789F2E7870998 /* WZFullscreenPopGesture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WZFullscreenPopGesture.modulemap; sourceTree = "<group>"; };
-		226532E26337E7E622B047B91F01EAF9 /* WZFullscreenPopGesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WZFullscreenPopGesture.debug.xcconfig; sourceTree = "<group>"; };
+		0C065AC7DD1A6AF59777DC084CD42AB3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2BE85F1CCAB00DED57DC181ED813F8F9 /* Pods-WZFullscreenPopGesture_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WZFullscreenPopGesture_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2CC9E9FCEB2642D5D0CD0934AA1D8E1E /* Pods-WZFullscreenPopGesture_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WZFullscreenPopGesture_Example-umbrella.h"; sourceTree = "<group>"; };
 		2D494591A319623ED1D43D9164C3000A /* Pods-WZFullscreenPopGesture_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WZFullscreenPopGesture_Example.release.xcconfig"; sourceTree = "<group>"; };
+		411380D09924DD45F0E70FD54484D4F0 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "WZFullscreenPopGesture/Classes/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		5FE3320EBAFA01D9B9F5B5A8A85A7539 /* WZFullscreenPopGesture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WZFullscreenPopGesture.release.xcconfig; sourceTree = "<group>"; };
 		60EA81D28EC5B25B5489E250F2276C0E /* Pods-WZFullscreenPopGesture_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WZFullscreenPopGesture_Example-dummy.m"; sourceTree = "<group>"; };
-		64511E7389CA0CCFD69CFE1BF4747EBF /* WZFullscreenPopGesture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WZFullscreenPopGesture-umbrella.h"; sourceTree = "<group>"; };
 		6D011005D70EA983D525C93383D03B8A /* Pods-WZFullscreenPopGesture_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WZFullscreenPopGesture_Tests-Info.plist"; sourceTree = "<group>"; };
+		70258A22F5F17570D7E27B9A63BE07B8 /* WZFullscreenPopGesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WZFullscreenPopGesture.debug.xcconfig; sourceTree = "<group>"; };
 		714B673F64C07BEC576FF3CEAD3BB5B7 /* Pods-WZFullscreenPopGesture_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WZFullscreenPopGesture_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		72AE315A6476C67D6C061028889E2D72 /* Pods-WZFullscreenPopGesture_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WZFullscreenPopGesture_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7406A0396147D09FF33F5139F0E8140F /* FDNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FDNavigationBar.m; path = WZFullscreenPopGesture/Classes/FDNavigationBar.m; sourceTree = "<group>"; };
 		785C8048007EB4B62E9914E22576F858 /* Pods-WZFullscreenPopGesture_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WZFullscreenPopGesture_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		816B7279AA8E8DBC0808100CDF45F8B1 /* Pods-WZFullscreenPopGesture_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WZFullscreenPopGesture_Tests.modulemap"; sourceTree = "<group>"; };
 		8B3FD223936F3BA0B8333069B321209E /* Pods-WZFullscreenPopGesture_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WZFullscreenPopGesture_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8BB2799CF6ED72BEF41B881694A0CDB3 /* Pods-WZFullscreenPopGesture_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WZFullscreenPopGesture_Example-Info.plist"; sourceTree = "<group>"; };
+		8BC2A404066C980F07FFABBE4A0928DB /* WZFullscreenPopGesture-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WZFullscreenPopGesture-Info.plist"; sourceTree = "<group>"; };
 		8DE8097BC8DC229BA6CBDE8B1F479E7E /* Pods-WZFullscreenPopGesture_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WZFullscreenPopGesture_Tests-dummy.m"; sourceTree = "<group>"; };
-		90399B43F5E2EDABD87DA84775589282 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "WZFullscreenPopGesture/Classes/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		920A0CDCE9C0B35010771EF6556286A3 /* WZFullscreenPopGesture-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WZFullscreenPopGesture-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A04C6C737181FD9EB2BF4356F72B5402 /* Pods-WZFullscreenPopGesture_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WZFullscreenPopGesture_Example.modulemap"; sourceTree = "<group>"; };
+		A72DA275976DC436FF91CA71D831EBA5 /* WZFullscreenPopGesture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WZFullscreenPopGesture.modulemap; sourceTree = "<group>"; };
 		AB3FE55D410EC2F265CB3CDF4D483FBD /* Pods-WZFullscreenPopGesture_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WZFullscreenPopGesture_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B0EEAB8E6BFFB761ED9CD05DD99B68A7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B1162B81E81FD68789886CE2CB0810E4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CCF58ABE855E8DDAE432EB1FC7150361 /* WZFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WZFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		BD25009C7C4D17A8B13D0B86AE8A706A /* FDNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FDNavigationBar.h; path = WZFullscreenPopGesture/Classes/FDNavigationBar.h; sourceTree = "<group>"; };
+		BD2C46857B30A469E87BA96B81BC4518 /* WZFullscreenPopGesture.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WZFullscreenPopGesture.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BD489F9BAEE40CA82CDCFAD238E82AA3 /* WZFullscreenPopGesture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WZFullscreenPopGesture-dummy.m"; sourceTree = "<group>"; };
+		C4B37EBF7025B9836FE6ED4AC0B7EA90 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "WZFullscreenPopGesture/Classes/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		D26A7C7EB69587F617E3FAA30E487BA8 /* Pods-WZFullscreenPopGesture_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WZFullscreenPopGesture_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D7E71F848E83A2E2FE7C378A92014345 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "WZFullscreenPopGesture/Classes/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		D83D329CB8D63C501E694DA6FE6A341E /* WZFullscreenPopGesture */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WZFullscreenPopGesture; path = WZFullscreenPopGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67131B7B89F1C73EA2548A226A5B745 /* Pods-WZFullscreenPopGesture_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WZFullscreenPopGesture_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E887FE98DB705DFD22446EC146B37E09 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EB14D91B67F64E4176FDEE3AE1736D82 /* WZFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WZFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
 		ECDB82F4D7DF354AA8545B456BC283C8 /* Pods-WZFullscreenPopGesture_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WZFullscreenPopGesture_Example"; path = Pods_WZFullscreenPopGesture_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F037EAC0AA8F189A342A9FB743BF90C1 /* Pods-WZFullscreenPopGesture_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-WZFullscreenPopGesture_Tests"; path = Pods_WZFullscreenPopGesture_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE052E9AF49F2E617C816D63BA70329 /* WZFullscreenPopGesture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WZFullscreenPopGesture-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B65B3CE7785C52AEE29DA06A6AF118A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA23A3C019671497AF9974DB9659435 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9167F96FB2C9E6C8214DE4B5946C2F12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F8BB2873F438F4F93BD50EBC0871B80E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99CC009136DCAFDCB9DB636E675B2D17 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFEDD6CD8ADC198B9B908C593E3B90B4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,12 +139,30 @@
 			path = "Target Support Files/Pods-WZFullscreenPopGesture_Example";
 			sourceTree = "<group>";
 		};
+		5294C0E8F642DEC9C1D360491C682870 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F717F69A2E3D9F047EE59DA39E6BC866 /* WZFullscreenPopGesture */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		81A9EAE4AD4D150A2B9EE641234F1F2C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0C065AC7DD1A6AF59777DC084CD42AB3 /* LICENSE */,
+				E887FE98DB705DFD22446EC146B37E09 /* README.md */,
+				BD2C46857B30A469E87BA96B81BC4518 /* WZFullscreenPopGesture.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		93DEA8A2E081A2F68D3BC9AFB2F53CCB /* Targets Support Files */ = {
@@ -162,40 +184,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A0921FD992B829D5B0B7777C9C125B81 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1380BA82E5F3A590744789F2E7870998 /* WZFullscreenPopGesture.modulemap */,
-				CCF58ABE855E8DDAE432EB1FC7150361 /* WZFullscreenPopGesture-dummy.m */,
-				920A0CDCE9C0B35010771EF6556286A3 /* WZFullscreenPopGesture-Info.plist */,
-				00C69D89C65509B985D878AB95DEC97D /* WZFullscreenPopGesture-prefix.pch */,
-				64511E7389CA0CCFD69CFE1BF4747EBF /* WZFullscreenPopGesture-umbrella.h */,
-				226532E26337E7E622B047B91F01EAF9 /* WZFullscreenPopGesture.debug.xcconfig */,
-				12A7F21E0C1765AD2F5031575E44FAFE /* WZFullscreenPopGesture.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WZFullscreenPopGesture";
-			sourceTree = "<group>";
-		};
-		BE608EB1461628CE0E6B4BE192534A73 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				B0EEAB8E6BFFB761ED9CD05DD99B68A7 /* LICENSE */,
-				B1162B81E81FD68789886CE2CB0810E4 /* README.md */,
-				0A0FB6FA42602EC1C1EE5FA30ADF81E5 /* WZFullscreenPopGesture.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				DCACD92624E433A8946C2FC66875F1AA /* Development Pods */,
+				5294C0E8F642DEC9C1D360491C682870 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				998B5EB023C4D9FAF3BF868EED1271D6 /* Products */,
 				93DEA8A2E081A2F68D3BC9AFB2F53CCB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D10AB70464C5E68AFE536D519D2A3E46 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A72DA275976DC436FF91CA71D831EBA5 /* WZFullscreenPopGesture.modulemap */,
+				BD489F9BAEE40CA82CDCFAD238E82AA3 /* WZFullscreenPopGesture-dummy.m */,
+				8BC2A404066C980F07FFABBE4A0928DB /* WZFullscreenPopGesture-Info.plist */,
+				EB14D91B67F64E4176FDEE3AE1736D82 /* WZFullscreenPopGesture-prefix.pch */,
+				FCE052E9AF49F2E617C816D63BA70329 /* WZFullscreenPopGesture-umbrella.h */,
+				70258A22F5F17570D7E27B9A63BE07B8 /* WZFullscreenPopGesture.debug.xcconfig */,
+				5FE3320EBAFA01D9B9F5B5A8A85A7539 /* WZFullscreenPopGesture.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WZFullscreenPopGesture";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -206,21 +218,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DCACD92624E433A8946C2FC66875F1AA /* Development Pods */ = {
+		F717F69A2E3D9F047EE59DA39E6BC866 /* WZFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
-				F69093B9F409783808CCF3F4AEB15C52 /* WZFullscreenPopGesture */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		F69093B9F409783808CCF3F4AEB15C52 /* WZFullscreenPopGesture */ = {
-			isa = PBXGroup;
-			children = (
-				D7E71F848E83A2E2FE7C378A92014345 /* UINavigationController+FDFullscreenPopGesture.h */,
-				90399B43F5E2EDABD87DA84775589282 /* UINavigationController+FDFullscreenPopGesture.m */,
-				BE608EB1461628CE0E6B4BE192534A73 /* Pod */,
-				A0921FD992B829D5B0B7777C9C125B81 /* Support Files */,
+				BD25009C7C4D17A8B13D0B86AE8A706A /* FDNavigationBar.h */,
+				7406A0396147D09FF33F5139F0E8140F /* FDNavigationBar.m */,
+				C4B37EBF7025B9836FE6ED4AC0B7EA90 /* UINavigationController+FDFullscreenPopGesture.h */,
+				411380D09924DD45F0E70FD54484D4F0 /* UINavigationController+FDFullscreenPopGesture.m */,
+				81A9EAE4AD4D150A2B9EE641234F1F2C /* Pod */,
+				D10AB70464C5E68AFE536D519D2A3E46 /* Support Files */,
 			);
 			name = WZFullscreenPopGesture;
 			path = ../..;
@@ -229,12 +235,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		39826718E410C11D2443448105FC16AF /* Headers */ = {
+		4C3C282684716B14003F23111EEC7759 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB3A877C942FEFA7207ADD48F4595600 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
-				2667293DC87C11F451F76B4E286BC285 /* WZFullscreenPopGesture-umbrella.h in Headers */,
+				F1C2D5873858CBA1AF52177E568188F3 /* FDNavigationBar.h in Headers */,
+				E91C913F3FE8C7285021475D4092DAF1 /* UINavigationController+FDFullscreenPopGesture.h in Headers */,
+				0441555B23AA35261D0C4FAF1D5E47C0 /* WZFullscreenPopGesture-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +276,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				13DC842E90A4775CE3C53AA394001C73 /* PBXTargetDependency */,
+				BDC6E932C0C88E343377FD4D45DE3E05 /* PBXTargetDependency */,
 			);
 			name = "Pods-WZFullscreenPopGesture_Example";
 			productName = Pods_WZFullscreenPopGesture_Example;
@@ -288,7 +295,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8746A813D7545A369E071DAD248F095D /* PBXTargetDependency */,
+				3687046873F26AA18FD10CE8E62DBACB /* PBXTargetDependency */,
 			);
 			name = "Pods-WZFullscreenPopGesture_Tests";
 			productName = Pods_WZFullscreenPopGesture_Tests;
@@ -297,12 +304,12 @@
 		};
 		EBFC4DC6959B8135F8FA2D0773023169 /* WZFullscreenPopGesture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F1CD782F928625E0871822928FCF7ED /* Build configuration list for PBXNativeTarget "WZFullscreenPopGesture" */;
+			buildConfigurationList = 8EC88EC110EC789D0078450D4009E29D /* Build configuration list for PBXNativeTarget "WZFullscreenPopGesture" */;
 			buildPhases = (
-				39826718E410C11D2443448105FC16AF /* Headers */,
-				56F22B8900EF1234D874CC0CF3D2535A /* Sources */,
-				99CC009136DCAFDCB9DB636E675B2D17 /* Frameworks */,
-				53EC5C231C8459CE1F80CE64083FD4A5 /* Resources */,
+				4C3C282684716B14003F23111EEC7759 /* Headers */,
+				213BFF7D0DFCE97140B9BC2097B21304 /* Sources */,
+				3B65B3CE7785C52AEE29DA06A6AF118A /* Frameworks */,
+				64252CB183460534506FD2DA861745F7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -350,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53EC5C231C8459CE1F80CE64083FD4A5 /* Resources */ = {
+		64252CB183460534506FD2DA861745F7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,20 +374,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		213BFF7D0DFCE97140B9BC2097B21304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F2EC4DC5417832340B7078E38277063 /* FDNavigationBar.m in Sources */,
+				CC8235C5C828E969219CA770C610CBEA /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				4EB3890520E7C18114CE7FAC41F7D42C /* WZFullscreenPopGesture-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CC4DEB9E2AF101A6E42E77D6081F86B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				941A45556779CC1095A8901C321C406C /* Pods-WZFullscreenPopGesture_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56F22B8900EF1234D874CC0CF3D2535A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				296AA2E581A2D279A24F2CFFEA897FDE /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
-				32CC64CF1DD757622F7C0F5FE0180FC1 /* WZFullscreenPopGesture-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,52 +403,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		13DC842E90A4775CE3C53AA394001C73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WZFullscreenPopGesture;
-			target = EBFC4DC6959B8135F8FA2D0773023169 /* WZFullscreenPopGesture */;
-			targetProxy = 3D651D5C9C8029E246C619E93BF4EC3F /* PBXContainerItemProxy */;
-		};
-		8746A813D7545A369E071DAD248F095D /* PBXTargetDependency */ = {
+		3687046873F26AA18FD10CE8E62DBACB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WZFullscreenPopGesture_Example";
 			target = 003934461A57C53701A4A28D8F824B95 /* Pods-WZFullscreenPopGesture_Example */;
-			targetProxy = 938C1DFB7E2284FE0B985AB2AD4DF68C /* PBXContainerItemProxy */;
+			targetProxy = DE844B6F3378C8B69A0870DD0C5791F3 /* PBXContainerItemProxy */;
+		};
+		BDC6E932C0C88E343377FD4D45DE3E05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WZFullscreenPopGesture;
+			target = EBFC4DC6959B8135F8FA2D0773023169 /* WZFullscreenPopGesture */;
+			targetProxy = 9F92846CD724EC8AEF539A8B94667E0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0DBA7BACAAF411140EE12AB50E7580DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 226532E26337E7E622B047B91F01EAF9 /* WZFullscreenPopGesture.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture.modulemap";
-				PRODUCT_MODULE_NAME = WZFullscreenPopGesture;
-				PRODUCT_NAME = WZFullscreenPopGesture;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		386DAB5937694D1B17A7AF2DCECA98BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 72AE315A6476C67D6C061028889E2D72 /* Pods-WZFullscreenPopGesture_Tests.release.xcconfig */;
@@ -540,38 +517,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		5074D84A598077F19C862527F1A90EC2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12A7F21E0C1765AD2F5031575E44FAFE /* WZFullscreenPopGesture.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture.modulemap";
-				PRODUCT_MODULE_NAME = WZFullscreenPopGesture;
-				PRODUCT_NAME = WZFullscreenPopGesture;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		608684EC139D91CC74C6BDB888C0EFA6 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -734,6 +679,69 @@
 			};
 			name = Debug;
 		};
+		D2F85EFB1CB3E34C972FC985AC2D869A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE3320EBAFA01D9B9F5B5A8A85A7539 /* WZFullscreenPopGesture.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture.modulemap";
+				PRODUCT_MODULE_NAME = WZFullscreenPopGesture;
+				PRODUCT_NAME = WZFullscreenPopGesture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E79513B32147BE0C1EB63F6225F8CEB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70258A22F5F17570D7E27B9A63BE07B8 /* WZFullscreenPopGesture.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WZFullscreenPopGesture/WZFullscreenPopGesture.modulemap";
+				PRODUCT_MODULE_NAME = WZFullscreenPopGesture;
+				PRODUCT_NAME = WZFullscreenPopGesture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -755,11 +763,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F1CD782F928625E0871822928FCF7ED /* Build configuration list for PBXNativeTarget "WZFullscreenPopGesture" */ = {
+		8EC88EC110EC789D0078450D4009E29D /* Build configuration list for PBXNativeTarget "WZFullscreenPopGesture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0DBA7BACAAF411140EE12AB50E7580DE /* Debug */,
-				5074D84A598077F19C862527F1A90EC2 /* Release */,
+				E79513B32147BE0C1EB63F6225F8CEB1 /* Debug */,
+				D2F85EFB1CB3E34C972FC985AC2D869A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

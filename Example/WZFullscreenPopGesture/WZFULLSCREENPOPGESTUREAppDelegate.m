@@ -20,29 +20,29 @@
     
     
     
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [UINavigationBar appearance].shadowImage = [UIImage new];
-    [[UINavigationBar appearance] setBackgroundImage: [self imageWithColor:UIColor.orangeColor andSize:CGSizeMake(1, 1)] forBarMetrics:0];
-    [UINavigationBar appearance].barTintColor = UIColor.whiteColor;
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.blueColor,
-    NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0f]}];
-    [UINavigationBar appearance].translucent = false;
+//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+//    [UINavigationBar appearance].shadowImage = [UIImage new];
+//    [[UINavigationBar appearance] setBackgroundImage: [self imageWithColor:UIColor.orangeColor andSize:CGSizeMake(1, 1)] forBarMetrics:0];
+//    [UINavigationBar appearance].barTintColor = UIColor.whiteColor;
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.blueColor,
+//    NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0f]}];
+//    [UINavigationBar appearance].translucent = false;
     
 //    /// 解决ios13 后导航栏透明
-    if(@available(iOS 13.0, *)) {
-        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
-//        [appearance configureWithOpaqueBackground];
-        appearance.backgroundColor = [UINavigationBar appearance].barTintColor;
-        appearance.titleTextAttributes = [UINavigationBar appearance].titleTextAttributes;
-        appearance.shadowColor = UIColor.clearColor;
-        appearance.shadowImage = [UIImage new];
-        [[UINavigationBar appearance] setStandardAppearance:appearance];
-        [[UINavigationBar appearance] setScrollEdgeAppearance:appearance];
-     }
+//    if(@available(iOS 13.0, *)) {
+//        UINavigationBarAppearance *appearance = [UINavigationBarAppearance new];
+////        [appearance configureWithOpaqueBackground];
+//        appearance.backgroundColor = [UINavigationBar appearance].barTintColor;
+//        appearance.titleTextAttributes = [UINavigationBar appearance].titleTextAttributes;
+//        appearance.shadowColor = UIColor.clearColor;
+//        appearance.shadowImage = [UIImage new];
+//        [[UINavigationBar appearance] setStandardAppearance:appearance];
+//        [[UINavigationBar appearance] setScrollEdgeAppearance:appearance];
+//     }
     
     
     FDNavigationViewController *navi = [[FDNavigationViewController alloc] initWithRootViewController:[ViewController new]];
-       navi.modalPresentationStyle = UIModalPresentationFullScreen;
+//       navi.modalPresentationStyle = UIModalPresentationFullScreen;
     self.window.rootViewController = navi;
     return YES;
 }

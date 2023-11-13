@@ -26,6 +26,8 @@
     self.navigationItem.title = NSStringFromClass([self class]);
     self.view.backgroundColor = UIColor.whiteColor;
 
+    self.fd_prefersNavigationBarHidden = FDNavigationHiddenTypeHidden;
+    self.fd_customBar.backgroundColor = UIColor.redColor;
     [self addUITapGestureRecognizer];
     UIView *xxxx = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
     xxxx.backgroundColor = [UIColor redColor];

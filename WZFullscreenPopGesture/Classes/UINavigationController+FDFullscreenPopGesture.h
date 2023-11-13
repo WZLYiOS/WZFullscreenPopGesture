@@ -21,6 +21,13 @@
 // SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import "FDNavigationBar.h"
+
+typedef NS_ENUM(NSUInteger, FDNavigationHiddenType) {
+    FDNavigationHiddenTypeNomar = 0,    // 显示导航栏
+    FDNavigationHiddenTypeHidden = 1,   // 隐藏
+    FDNavigationHiddenTypeCustom = 2,   // 显示自定义导航栏
+};
 
 /// "UINavigation+FDFullscreenPopGesture" extends UINavigationController's swipe-
 /// to-pop behavior in iOS 7+ by supporting fullscreen pan gesture. Instead of
@@ -39,6 +46,12 @@
 /// Default to YES, disable it if you don't want so.
 @property (nonatomic, assign) BOOL fd_viewControllerBasedNavigationBarAppearanceEnabled;
 
+/// 是否开启fd功能，默认NO
+@property (nonatomic, assign) BOOL fd_open;
+
+// 默认返回按钮: image/UIView
+@property (strong,nonatomic) UIImage *fd_backItem;
+
 @end
 
 /// Allows any view controller to disable interactive pop gesture, which might
@@ -53,12 +66,29 @@
 /// Indicate this view controller prefers its navigation bar hidden or not,
 /// checked when view controller based navigation bar's appearance is enabled.
 /// Default to NO, bars are more likely to show.
+@property (nonatomic, assign) FDNavigationHiddenType fd_prefersNavigationBarHidden;
+
+/// Indicate this view controller prefers its navigation bar hidden or not,
+/// checked when view controller based navigation bar's appearance is enabled.
+/// Default to NO, bars are more likely to show.
 //@property (nonatomic, assign) BOOL fd_prefersNavigationBarHidden;
 
 /// Max allowed initial distance to left edge when you begin the interactive pop
 /// gesture. 0 by default, which means it will ignore this limit.
 @property (nonatomic, assign) CGFloat fd_interactivePopMaxAllowedInitialDistanceToLeftEdge;
 
+/// 自定义导航栏
+@property (nonatomic, strong, readonly) FDNavigationBar *fd_customBar;
+
+// 是否显示导航栏
+- (BOOL)isPrefersNavigationBarHidden;
+
 @end
 
+// MARK - 手势屏蔽
+@interface UIScrollView (FDFullscreenPopGesture)
 
+/// 是否开启手势，默认NO
+@property (nonatomic, assign) BOOL fd_scrollViewPopGestureRecognizerEnable;
+
+@end

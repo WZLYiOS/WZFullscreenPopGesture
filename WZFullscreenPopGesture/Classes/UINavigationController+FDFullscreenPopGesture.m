@@ -103,10 +103,23 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillAppear:), self, @selector(fd_viewWillAppear:));
-//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillDisappear:), self, @selector(fd_viewWillDisappear:));
-//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewDidLoad), self, @selector(fd_viewDidLoad));
-//        FDFullscreenPopGestureSwizzleMethod(self, @selector(viewWillLayoutSubviews), self, @selector(fd_viewDidLayoutSubviews));
+        Method viewWillAppear_originalMethod = class_getInstanceMethod(self, @selector(viewWillAppear:));
+        Method viewWillAppear_swizzledMethod = class_getInstanceMethod(self, @selector(fd_viewWillAppear:));
+        method_exchangeImplementations(viewWillAppear_originalMethod, viewWillAppear_swizzledMethod);
+    
+        Method viewWillDisappear_originalMethod = class_getInstanceMethod(self, @selector(viewWillDisappear:));
+        Method viewWillDisappear_swizzledMethod = class_getInstanceMethod(self, @selector(fd_viewWillDisappear:));
+        method_exchangeImplementations(viewWillDisappear_originalMethod, viewWillDisappear_swizzledMethod);
+        
+        
+        Method viewDidLoad_originalMethod = class_getInstanceMethod(self, @selector(viewDidLoad));
+        Method viewDidLoad_swizzledMethod = class_getInstanceMethod(self, @selector(fd_viewDidLoad));
+        method_exchangeImplementations(viewDidLoad_originalMethod, viewDidLoad_swizzledMethod);
+        
+        Method viewDidLayout_originalMethod = class_getInstanceMethod(self, @selector(viewDidLayoutSubviews));
+        Method viewDidLayout_swizzledMethod = class_getInstanceMethod(self, @selector(fd_viewDidLayoutSubviews));
+        method_exchangeImplementations(viewDidLayout_originalMethod, viewDidLayout_swizzledMethod);
+        
     });
 }
 
@@ -114,6 +127,10 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 {
     // Forward to primary implementation.
     [self fd_viewWillAppear:animated];
+    
+    if (![self isNavigationBarEnabled]) {
+        return;
+    }
     
     if (self.fd_willAppearInjectBlock) {
         self.fd_willAppearInjectBlock(self, animated);
@@ -124,20 +141,44 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
 {
     // Forward to primary implementation.
     [self fd_viewWillDisappear:animated];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        UIViewController *viewController = self.navigationController.viewControllers.lastObject;
-//        if (viewController && !viewController.fd_prefersNavigationBarHidden) {
-//            [self.navigationController setNavigationBarHidden:NO animated:NO];
-//        }
-//    });
+    
+    if (![self isNavigationBarEnabled]) {
+        return;
+    }
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        UIViewController *viewController = self.navigationController.viewControllers.lastObject;
+        if (viewController && !viewController.isPrefersNavigationBarHidden) {
+            [self.navigationController setNavigationBarHidden:NO animated:NO];
+        }
+    });
+}
+
+/// 是否开放导航栏
+- (BOOL)isNavigationBarEnabled {
+    if (self.navigationController == nil) {
+        return false;
+    }
+    if (!self.navigationController.fd_open) {
+        return false;
+    }
+    if (![self.navigationController.viewControllers containsObject: self]) {
+        return false;
+    };
+    return true;
 }
 
 - (void)fd_viewDidLoad{
     [self fd_viewDidLoad];
+    if ([self isNavigationBarEnabled]) {
+        [self setBackNavigationItem];
+    }
 }
 
 - (void)fd_viewDidLayoutSubviews {
     [self fd_viewDidLayoutSubviews];
+    if (self.fd_prefersNavigationBarHidden == FDNavigationHiddenTypeCustom && self.fd_customBar) {
+        [self.view bringSubviewToFront: self.fd_customBar];
+    }
 }
 
 - (_FDViewControllerWillAppearInjectBlock)fd_willAppearInjectBlock
@@ -150,6 +191,19 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_willAppearInjectBlock), block, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+/// 设置导航栏默认返回样式
+- (void)setBackNavigationItem{
+    /// 设置导航栏默认返回样式
+    if (self.navigationController.viewControllers.count > 1) {
+        UIImage *img = self.navigationController.fd_backItem;
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtnAction)];
+    }
+}
+
+#pragma mark - 返回
+- (void)leftBtnAction {
+    [self.navigationController popViewControllerAnimated: YES];
+}
 
 @end
 
@@ -229,22 +283,22 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
         return;
     }
     
-//    __weak typeof(self) weakSelf = self;
-//    _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
-//        __strong typeof(weakSelf) strongSelf = weakSelf;
-//        if (strongSelf && viewController.navigationController.fd_open) {
-//            [strongSelf setNavigationBarHidden:viewController.fd_prefersNavigationBarHidden animated:animated];
-//        }
-//    };
+    __weak typeof(self) weakSelf = self;
+    _FDViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (strongSelf) {
+            [strongSelf setNavigationBarHidden:viewController.isPrefersNavigationBarHidden animated:animated];
+        }
+    };
     
     // Setup will appear inject block to appearing view controller.
     // Setup disappearing view controller as well, because not every view controller is added into
     // stack by pushing, maybe by "-setViewControllers:".
-//    appearingViewController.fd_willAppearInjectBlock = block;
-//    UIViewController *disappearingViewController = self.viewControllers.lastObject;
-//    if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
-//        disappearingViewController.fd_willAppearInjectBlock = block;
-//    }
+    appearingViewController.fd_willAppearInjectBlock = block;
+    UIViewController *disappearingViewController = self.viewControllers.lastObject;
+    if (disappearingViewController && !disappearingViewController.fd_willAppearInjectBlock) {
+        disappearingViewController.fd_willAppearInjectBlock = block;
+    }
 }
 
 - (_FDFullscreenPopGestureRecognizerDelegate *)fd_popGestureRecognizerDelegate
@@ -267,7 +321,6 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     if (!panGestureRecognizer) {
         panGestureRecognizer = [[UIPanGestureRecognizer alloc] init];
         panGestureRecognizer.maximumNumberOfTouches = 1;
-        
         objc_setAssociatedObject(self, _cmd, panGestureRecognizer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return panGestureRecognizer;
@@ -298,14 +351,15 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, key, @(open), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIImage *)fd_backItem {
+- (id)fd_backItem {
     return objc_getAssociatedObject(self, _cmd);
 }
 
-- (void)setFd_backItem:(UIImage *)backItem{
+- (void)setFd_backItem:(id)backItem{
     SEL key = @selector(fd_backItem);
     objc_setAssociatedObject(self, key, backItem, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
 
 @end
 
@@ -321,16 +375,25 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, @selector(fd_interactivePopDisabled), @(disabled), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-//- (BOOL)fd_prefersNavigationBarHidden
-//{
-//    return [objc_getAssociatedObject(self, _cmd) boolValue];
-//}
-//
-//- (void)setFd_prefersNavigationBarHidden:(BOOL)hidden
-//{
-//    objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(hidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//}
+// 是否显示导航栏
+- (BOOL)isPrefersNavigationBarHidden {
+    if (self.fd_prefersNavigationBarHidden == FDNavigationHiddenTypeNomar) {
+        return false;
+    }
+    return true;
+}
 
+- (FDNavigationHiddenType)fd_prefersNavigationBarHidden
+{
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+}
+
+- (void)setFd_prefersNavigationBarHidden:(FDNavigationHiddenType)fd_prefersNavigationBarHidden {
+    objc_setAssociatedObject(self, @selector(fd_prefersNavigationBarHidden), @(fd_prefersNavigationBarHidden), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (fd_prefersNavigationBarHidden == FDNavigationHiddenTypeCustom) {
+        self.fd_customBar = [[FDNavigationBar alloc] initWithController: self];
+    }
+}
 
 - (CGFloat)fd_interactivePopMaxAllowedInitialDistanceToLeftEdge
 {
@@ -347,6 +410,36 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, key, @(MAX(0, distance)), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (FDNavigationBar *)fd_customBar {
+    return objc_getAssociatedObject(self, _cmd);
+}
+
+- (void)setFd_customBar:(FDNavigationBar *)fd_customBar {
+    SEL key = @selector(fd_customBar);
+    objc_setAssociatedObject(self, key, fd_customBar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end
 
+
+@implementation UIScrollView (FDFullscreenPopGesture)
+
+- (BOOL)fd_scrollViewPopGestureRecognizerEnable {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setFd_scrollViewPopGestureRecognizerEnable:(BOOL)fd_scrollViewPopGestureRecognizerEnable {
+    objc_setAssociatedObject(self, @selector(fd_scrollViewPopGestureRecognizerEnable), @(fd_scrollViewPopGestureRecognizerEnable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if (self.contentOffset.x <= 0 && self.fd_scrollViewPopGestureRecognizerEnable) {
+        if ([otherGestureRecognizer.delegate isKindOfClass:NSClassFromString(@"_FDFullscreenPopGestureRecognizerDelegate")]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+@end

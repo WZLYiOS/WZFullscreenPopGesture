@@ -1,9 +1,9 @@
 {
   "name": "WZFullscreenPopGesture",
-  "version": "0.1.0",
+  "version": "6.0.3",
   "summary": "A short description of WZFullscreenPopGesture.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/qiuqixiang/WZFullscreenPopGesture",
+  "homepage": "https://github.com/WZLYiOS/WZFullscreenPopGesture",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,14 @@
     "qiuqixiang": "739140860@qq.com"
   },
   "source": {
-    "git": "https://github.com/qiuqixiang/WZFullscreenPopGesture.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/WZLYiOS/WZFullscreenPopGesture.git",
+    "tag": "6.0.3"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "13.0"
   },
-  "source_files": "WZFullscreenPopGesture/Classes/**/*"
+  "swift_versions": "5.0",
+  "requires_arc": true,
+  "source_files": "WZFullscreenPopGesture/Classes/**/*",
+  "swift_version": "5.0"
 }

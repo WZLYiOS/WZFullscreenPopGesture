@@ -33,8 +33,8 @@
 
 - (void)tapAction{
     Demo3ViewController *vc = [Demo3ViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
-    [self.navigationController setViewControllers:@[vc] animated:true];
+    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController setViewControllers:@[vc] animated:true];
 }
 
 /*
