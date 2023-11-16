@@ -80,6 +80,9 @@ typedef NS_ENUM(NSUInteger, FDNavigationHiddenType) {
 /// 自定义导航栏
 @property (nonatomic, strong, readonly) FDNavigationBar *fd_customBar;
 
+/// 电池条的颜色
+@property (nonatomic, assign) UIStatusBarStyle fd_statusBarStyle;
+
 // 是否显示导航栏
 - (BOOL)isPrefersNavigationBarHidden;
 

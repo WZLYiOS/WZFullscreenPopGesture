@@ -81,5 +81,20 @@
     [self.controller.navigationController popViewControllerAnimated: YES];
 }
 
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    [super setBackgroundColor: backgroundColor];
+    if (@available(iOS 15.0, *)) {
+        self.standardAppearance.backgroundColor = backgroundColor;
+        self.scrollEdgeAppearance.backgroundColor = backgroundColor;
+    }
+}
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage forBarMetrics:(UIBarMetrics)barMetrics {
+    [super setBackgroundImage: backgroundImage forBarMetrics: barMetrics];
+    if (@available(iOS 15.0, *)) {
+        self.standardAppearance.backgroundImage = backgroundImage;
+        self.scrollEdgeAppearance.backgroundImage = backgroundImage;
+    }
+}
 
 @end

@@ -419,6 +419,14 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
     objc_setAssociatedObject(self, key, fd_customBar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (UIStatusBarStyle)fd_statusBarStyle {
+    return [objc_getAssociatedObject(self, _cmd) integerValue];
+}
+
+- (void)setFd_statusBarStyle:(UIStatusBarStyle)fd_statusBarStyle {
+    objc_setAssociatedObject(self, @selector(fd_statusBarStyle), @(fd_statusBarStyle), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
 @end
 
