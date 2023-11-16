@@ -78,7 +78,7 @@ void FDFullscreenPopGestureSwizzleMethod(Class originalCls, SEL originalSelector
     
     // Prevent calling the handler when the gesture begins in an opposite direction.
     CGPoint translation = [gestureRecognizer translationInView:gestureRecognizer.view];
-    BOOL isLeftToRight = [UIApplication sharedApplication].userInterfaceLayoutDirection == UIUserInterfaceLayoutDirectionLeftToRight;
+    BOOL isLeftToRight = [UIView appearance].semanticContentAttribute == UISemanticContentAttributeForceLeftToRight;
     CGFloat multiplier = isLeftToRight ? 1 : - 1;
     if ((translation.x * multiplier) <= 0) {
         return NO;
