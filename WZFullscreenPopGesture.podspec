@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WZFullscreenPopGesture'
-  s.version          = '6.0.8'
+  s.version          = '6.0.9'
   s.summary          = 'A short description of WZFullscreenPopGesture.'
 
 # This description is used to generate tags and improve search results.
