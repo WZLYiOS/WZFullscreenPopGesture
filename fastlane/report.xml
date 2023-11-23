@@ -5,59 +5,59 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000435">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000395">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: version_get_podspec" time="0.000473">
+      <testcase classname="fastlane.lanes" name="01: version_get_podspec" time="0.000449">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: pod_lib_lint" time="70.745611">
+      <testcase classname="fastlane.lanes" name="02: pod_lib_lint" time="16.650773">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: version_bump_podspec" time="0.000757">
+      <testcase classname="fastlane.lanes" name="03: version_bump_podspec" time="0.00101">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: git_add" time="0.016182">
+      <testcase classname="fastlane.lanes" name="04: git_add" time="0.027486">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: git_commit" time="0.031626">
+      <testcase classname="fastlane.lanes" name="05: git_commit" time="0.048001">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: push_to_git_remote" time="3.553127">
+      <testcase classname="fastlane.lanes" name="06: push_to_git_remote" time="3.839047">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: git_tag_exists" time="0.01652">
+      <testcase classname="fastlane.lanes" name="07: git_tag_exists" time="0.021367">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: add_git_tag" time="0.022565">
+      <testcase classname="fastlane.lanes" name="08: add_git_tag" time="0.030309">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: push_git_tags" time="3.377218">
+      <testcase classname="fastlane.lanes" name="09: push_git_tags" time="5.473902">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: pod_push" time="245.230493">
+      <testcase classname="fastlane.lanes" name="10: pod_push" time="345.051303">
         
-          <failure message="/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:76:in `block (2 levels) in parsing_binding'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:354:in `run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/commands_generator.rb:43:in `start'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.210.1/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/fastlane:23:in `load'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/fastlane:23:in `&lt;main&gt;'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:24:in `eval'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:24:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod repo push https://github.com/WZLYiOS/WZPodSpecs.git 'WZFullscreenPopGesture.podspec' --allow-warnings --skip-import-validation' was 1 instead of 0.&#10;&#10;Validating spec&#10; -&gt; WZFullscreenPopGesture -&gt; WZFullscreenPopGesture (6.0.2)&#10;    - WARN  | summary: The summary is not meaningful.&#10;    - WARN  | description: The description is shorter than the summary.&#10;    - WARN  | url: There was a problem validating the URL https://github.com/WZLYiOS/WZFullscreenPopGesture.&#10;    - ERROR | [iOS] unknown: Encountered an unknown error ([!] /usr/bin/git clone https://github.com/WZLYiOS/WZFullscreenPopGesture.git /var/folders/9k/r6jngj7x78g5h86k_kjzrmrc0000gn/T/d20221130-7289-d5vven --template= --single-branch --depth 1 --branch 6.0.2&#10;&#10;Cloning into '/var/folders/9k/r6jngj7x78g5h86k_kjzrmrc0000gn/T/d20221130-7289-d5vven'...&#10;fatal: unable to access 'https://github.com/WZLYiOS/WZFullscreenPopGesture.git/': HTTP/2 stream 1 was not closed cleanly before end of the underlying stream&#10;) during validation.&#10;&#10;[!] The `WZFullscreenPopGesture.podspec` specification does not validate.&#10;" />
+          <failure message="/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:229:in `chdir'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:229:in `execute_action'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing'&#10;Fastfile:76:in `block (2 levels) in parsing_binding'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/lane_manager.rb:47:in `cruise_lane'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/command.rb:187:in `call'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/command.rb:157:in `run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/commands_generator.rb:354:in `run'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/commands_generator.rb:43:in `start'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/gems/fastlane-2.212.1/bin/fastlane:23:in `&lt;top (required)&gt;'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/fastlane:23:in `load'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/fastlane:23:in `&lt;main&gt;'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:24:in `eval'&#10;/Users/qiuqixiang/.rvm/gems/ruby-2.7.0/bin/ruby_executable_hooks:24:in `&lt;main&gt;'&#10;&#10;Exit status of command 'pod trunk push 'WZFullscreenPopGesture.podspec' --allow-warnings' was 1 instead of 0.&#10;Updating spec repo `trunk`&#10;[!] CDN: trunk Repo update failed - 14 error(s):&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_e_4_6.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_b_9_3.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_e_2_f.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_c_b_2.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_d_0_7.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_6_d_8.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_b_b_7.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_c_7_9.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_a_c_7.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_4_2_4.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_2_b_a.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_4_2_5.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_8_0_9.txt Response: Timeout was reached&#10;CDN: trunk URL couldn't be downloaded: https://cdn.cocoapods.org/all_pods_versions_0_6_9.txt Response: Timeout was reached&#10;" />
         
       </testcase>
     

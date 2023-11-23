@@ -26,16 +26,12 @@ platform :ios do
     # 获取版本号
     target_version = version_get_podspec(path: podspec_path)
 
-    repo_source = "https://github.com/WZLYiOS/WZPodSpecs.git"
+    #repo_source = "https://github.com/WZLYiOS/WZPodSpecs.git.git"
+    repo_source = options[:r]
 
     # 验证 podspec
-    pod_lib_lint(verbose: true,allow_warnings: true)
-    #pod_lib_lint(
-     # podspec: podspec_path,
-     # allow_warnings: true,
-     # skip_import_validation: true,
-     # sources: [repo_source, "https://github.com/CocoaPods/Specs.git"])
-
+    pod_lib_lint(verbose: false,allow_warnings: true)
+    
     # 设置 podspec 版本
     version_bump_podspec(
     	path: podspec_path,
@@ -49,12 +45,11 @@ platform :ios do
     
     # 添加 podspec 和 framework
     git_add(path: paths)
-
     message = options[:message]
 
     if message.nil?
       message = "#{podspec_name} 发布 #{target_version} 版本"
-    end
+     end
 
     # 提交 podspec 和 framework
     git_commit(path: paths, message: message)
@@ -63,20 +58,23 @@ platform :ios do
     push_to_git_remote
 
     
-
     # 添加标签
     if !git_tag_exists(tag: target_version)
+      # 删除对应 tag
       add_git_tag tag: target_version
     end
 
     # 推送标签
     push_git_tags
+    
 
     # 发布到 pod
-    pod_push(
-      path: podspec_path,
-      skip_import_validation: true,
-      repo: repo_source,
-      allow_warnings: true)
+    if repo_source
+        pod_push(path: podspec_path, repo: target_repo, allow_warnings: true, verbose: true)
+    else
+       # pod trunk push 'spec_path'
+       pod_push(path: podspec_path, allow_warnings: true, verbose: false)
+    end
+
   end
 end
